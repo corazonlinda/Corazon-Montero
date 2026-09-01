@@ -1,6 +1,7 @@
 # Corazón Montero
 
-[Three to six sentences on who you are and what you are working toward — replace this placeholder. Draw from your background in Biology, Psychology, and healthcare, and say what you're building toward in this course.]
+I am an a MBA student and healthcare professional learning all things AI. I graduated with a Bachelors of Science in Biology and Psychology from University of Hawaii at Manoa. My reasoning behind pursuing those degrees is to become a Oncologist in the future and help people with cancer. I am interested in healthcare management, business strategy and oncology. I am passionate about expanding healthcare access to underpriviledged communities across Hawai’i.
+
 
 ## Engagement Index
 
