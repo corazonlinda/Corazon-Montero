@@ -1,11 +1,9 @@
-<!-- PR TARGET: https://github.com/corazonlinda/Corazon-Montero | Stage 1.1 (2.5 pts) -->
+<!-- PR TARGET:  | Stage 1.1 -->
 # Stage 1.1 review — engagement brief
-
-**Not yet submitted. Held; the deadline has not passed.**
 
 > Checked 2026-08-31. There is no Stage 1.1 brief in your repository — docs/briefs/ exists and holds only its README — and no submission in Lamaku. Nothing is recorded. You appeared on my roster for the first time in the 31 August export, so this is your first feedback from me on this stage; read it as an orientation rather than a scolding.
 
-### Read the stage 0 feedback alongside this one
+### Read the Stage 0 feedback alongside this one
 
 Your repository is in reasonable shape — the skeleton is mostly there and your .gitignore is correct — so this brief has somewhere to land. The one thing worth doing first is replacing the placeholder bio in README.md, because that is a thirty-minute job that is currently costing more than anything else in your portfolio. Details in the Stage 0 comment.
 
@@ -37,7 +35,7 @@ The farm cannot influence prices — it takes what the market gives, which is wh
 
 The mechanism that decides it is that labor compounds: the hours for q beds of a crop are q x hours-per-bed-per-week x 36 x (1 + rate) to the power of q. So each additional bed raises the labor requirement for every bed of that crop, not just the new one. That is why the crop earning the most per bed also gets expensive fastest, and the question is where those two things cross.
 
-### Where you stand, and what i would do about it
+### Where you stand, and what I would do about it
 
 Most of this cohort has finished this stage and several are into Stage 1.2, the specification and the Excel model, which is due 6 September. That is a real gap and it is worth knowing about now rather than discovering later.
 
@@ -53,9 +51,11 @@ Treat this PR the way an analyst treats feedback from a senior reviewer — a re
 
 1. **Read it yourself first.** Form your own view before you change anything. Disagreeing *with a documented reason* is a legitimate, senior response.
 2. **Stress-test it with an LLM.** Paste this review and your brief into your assistant and ask it to (a) explain anything you are unsure of, and (b) argue the *other side* — where might the reviewer be wrong, and what would you give up by making each change.
-3. **Then write the changes yourself.** For a brief, this matters more than usual: a hypothesis you did not generate cannot be honestly compared against your model in Stage 3, and that comparison is the entire point of writing the brief first.
+3. **Then write the changes yourself.** For a brief this matters more than usual: a hypothesis you did not generate cannot be honestly compared against your model in Stage 3, and that comparison is the entire point of writing the brief first.
 4. **Close the loop.** Reply in this thread with what you changed and what you pushed back on, then commit and push.
 
-*One standing rule for this stage: do not revise your hypothesis to match what your model later tells you. If the model contradicts the brief, that is a finding, not an error — Stage 3 asks you to explain the gap, and a brief quietly edited to be right afterwards has nothing left to explain.*
+*One standing rule: do not revise your hypothesis to match what your model later tells you. If the model contradicts the brief, that is a finding, not an error.*
+
+*Your score and the per-criterion breakdown are in your Lamaku comment, not here — this repository is public.*
 
 — Adam
