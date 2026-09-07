@@ -1,47 +1,42 @@
-<!-- PR TARGET:  | Stage 1.1 -->
+<!-- PR TARGET: https://github.com/corazonlinda/Corazon-Montero | Stage 1.1 -->
 # Stage 1.1 review — engagement brief
 
-> Checked 2026-08-31. There is no Stage 1.1 brief in your repository — docs/briefs/ exists and holds only its README — and no submission in Lamaku. Nothing is recorded. You appeared on my roster for the first time in the 31 August export, so this is your first feedback from me on this stage; read it as an orientation rather than a scolding.
+**Brief:** [`docs/briefs/perfect-competition-brief.md`](https://github.com/corazonlinda/Corazon-Montero/blob/main/docs/briefs/perfect-competition-brief.md)
 
-### Read the Stage 0 feedback alongside this one
+> Graded 2026-09-07 against the brief you committed on 6 September. At every earlier pass this file did not exist, so this stage had been standing as not submitted. It arrived, and it arrived with arithmetic in it that almost nobody else attempted.
 
-Your repository is in reasonable shape — the skeleton is mostly there and your .gitignore is correct — so this brief has somewhere to land. The one thing worth doing first is replacing the placeholder bio in README.md, because that is a thirty-minute job that is currently costing more than anything else in your portfolio. Details in the Stage 0 comment.
+| Criterion | Where it stands |
+|---|---|
+| Problem restated in your own voice | This is the strongest part of the brief and it is written the way the criterion asks for. You separate three things that most briefs run together: what is outside the farmer's control, what limits her, and what she actually gets to choose. You catch the tension the whole case turns on — the crop caps total 70 against 64 beds, so not all three can be planted to their maximum — and you say why labor is not a fixed pool but something that grows as beds are added. What is still open is that nothing on the page says what it costs to decide this badly: the plan is committed once, before the season, with no chance to correct it in week eight. |
+| Hypothesis names a specific mix | 30 mesclun, 20 carrot, 12 tomato. Three whole numbers, every one inside its own cap, 62 of the 64 beds used, and the two beds you leave fallow are deliberate rather than left over. The frontmatter carries the same numbers as the body. Nothing to add. |
+| Economic mechanism | You did the arithmetic, and I checked it against my own model: 30 mesclun, 20 carrot and 12 tomato beds require 6,332 hours against the 6,480 available, and a thirteenth tomato bed takes the requirement to 6,982. Both figures are right to the hour. Very few briefs in this cohort computed anything at all, and yours computes the exact quantity your prediction rests on. What holds the criterion short of everything this criterion asks for is that the hour ceiling is the only mechanism on the page. Your argument is that the farmer stops at 12 tomato beds because a thirteenth will not fit. The question the case is really built around is the other one: does a tomato bed stop being worth planting before the hours run out? |
+| Falsifiability and process | Three conditions, and the middle one is exactly the right test — if Solver finds a thirteenth tomato bed feasible, the arithmetic that produced your number is wrong, and you would know it in one glance. The third is good too: a mix that uses the same labor or less and earns more is a clean refutation. What is still open is the first one. "Any other mix than 30, 20 and 12" makes 29 mesclun beds and 4 tomato beds the same verdict, and they are not the same verdict at all. Sequence and path are clean — the brief is at the canonical path and was committed before any model existed in the repository. |
 
-### What this stage asks for
+### I checked your arithmetic, and it holds
 
-About a page at docs/briefs/perfect-competition-brief.md, in your own words, committed before you build anything.
+Both numbers in your hypothesis reproduce exactly against my own model of this case.
 
-The reason it comes before the model, and the reason it is graded on its own: a prediction written before the model runs can be proven wrong. The same sentence written afterwards is a summary of the output, and it teaches you nothing, because you can no longer tell "I understood the economics" from "I read the answer cell." Stage 3 asks you to compare what you predicted against what the model found, and that comparison cannot be reconstructed later. A wrong hypothesis, precisely reasoned, is worth as much as a correct one and considerably more than a lucky one.
+30 mesclun beds require 30 x 1.25 x 36 x 1.0125^30, which is 1,959.7 hours. 20 carrot beds require 20 x 0.8333 x 36 x 1.025^20, or 983.2. 12 tomato beds require 12 x 2.50 x 36 x 1.10^12, or 3,389.5. That totals 6,332 against a pool of 6,480 — your figure, to the hour.
 
-- State the problem in your own words. What the farm is deciding, what is fixed, what you choose, what limits the choice, and what it costs to decide badly. Restating is not copying — if you cannot say it differently from the case page, you do not have it yet.
+The thirteenth tomato bed takes tomato hours from 3,389.5 to 4,039.2, and the farm total to 6,982. Also your figure. That is a real derivation, not a guess dressed up as one, and it is the thing that separates a brief with a mechanism from a brief with an opinion.
 
-- Name a specific mix. Three real bed counts: I expect X tomato beds, Y carrot beds, Z mesclun beds. Not a range, not percentages, not "a balanced mix."
+### The one question your mechanism does not ask
 
-- Say why, using the numbers the case gives you.
+Your whole argument is a capacity argument: 12 tomato beds because 13 will not fit inside 6,480 hours. That is a legitimate reading and you have supported it properly. But it assumes the twelfth bed is worth planting, and nothing on the page tests that.
 
-- Say how you would know you were wrong. Two or three named outcomes. This is where most of this cohort loses points, so write it carefully: "if the model shows a different mix" is true of every hypothesis ever written and tests nothing.
+The other reading is a marginal one. A bed stops being worth planting when the extra cost of that one bed exceeds the $8,800 it brings in — and because tomato labor compounds at 10% per bed, that cost climbs fast. If the marginal cost of the eleventh or twelfth tomato bed has already passed $8,800, the farmer stops there whether or not there are hours left over, and your model will come back with unused labor.
 
-### The case, in short
+That is not a correction and you should not touch the brief. It is the question to carry into the model: build the marginal-cost schedule for tomatoes bed by bed, find where it crosses $8,800, and then see whether the answer is set by the ceiling or by the crossing. Whichever it turns out to be, you will have a real finding to write up, and your third falsification condition already anticipates it.
 
-A market garden has 64 beds — four plots of 16 — and a 36-week season. Fixed costs are $20,000. The farmer earns $50,000 and spends half her time in the field, which works out to 720 field hours at an implied $34.72 an hour. She can hire up to four temporary workers at $25,000 each for up to 1,440 hours, an implied $17.36 an hour.
+### Do not edit this brief from here on
 
-- Tomatoes — max 20 beds, $8,800 per bed, 2.50 labor hours per bed per week, $880 fertilizer per bed, 10.00% diminishing returns per bed
+The brief is committed and dated, and from now on it is evidence rather than a draft. If your model returns something other than 30, 20 and 12, that gap is the most valuable thing you will have to write about — it is exactly what the analysis stage asks you to explain. A brief quietly revised afterwards to agree with the model has nothing left to explain.
 
-- Carrots — max 20 beds, $2,094 per bed, 0.833 labor hours per bed per week, $440 fertilizer per bed, 2.50% per bed
+### Where your repository stands for the next stage
 
-- Mesclun — max 30 beds, $2,700 per bed, 1.25 labor hours per bed per week, $880 fertilizer per bed, 1.25% per bed
+Stage 1.2 is the specification and the Excel model, and there is nothing in your repository for it yet — you have capabilities/README.md but no capabilities/marginal-analysis/ folder underneath it.
 
-The farm cannot influence prices — it takes what the market gives, which is what makes this perfect competition. The caps sum to 70 against 64 beds, so all three cannot be maxed and something has to give.
-
-The mechanism that decides it is that labor compounds: the hours for q beds of a crop are q x hours-per-bed-per-week x 36 x (1 + rate) to the power of q. So each additional bed raises the labor requirement for every bed of that crop, not just the new one. That is why the crop earning the most per bed also gets expensive fastest, and the question is where those two things cross.
-
-### Where you stand, and what I would do about it
-
-Most of this cohort has finished this stage and several are into Stage 1.2, the specification and the Excel model, which is due 6 September. That is a real gap and it is worth knowing about now rather than discovering later.
-
-It is also a gap people in this cohort have closed in two or three days. The order that works: fix the README bio tonight, write this brief tomorrow, then start the specification. The brief is an hour of honest thinking, not a research project, and it has to come before the model.
-
-If anything is blocking you — access, tooling, or the assignment itself — say so now rather than after the deadline. I would rather answer a question this week than grade a gap next week.
+The three files it wants are capabilities/marginal-analysis/spec.md, capabilities/marginal-analysis/model.xlsx, and a short README.md in the same folder. The order matters and is graded from your commit history: the specification is written and committed first, then the workbook is built from it. Two other canonical files are also still missing — analysis/README.md and docs/README.md — and each of those is one sentence saying what the folder holds.
 
 ---
 
@@ -51,10 +46,10 @@ Treat this PR the way an analyst treats feedback from a senior reviewer — a re
 
 1. **Read it yourself first.** Form your own view before you change anything. Disagreeing *with a documented reason* is a legitimate, senior response.
 2. **Stress-test it with an LLM.** Paste this review and your brief into your assistant and ask it to (a) explain anything you are unsure of, and (b) argue the *other side* — where might the reviewer be wrong, and what would you give up by making each change.
-3. **Then write the changes yourself.** For a brief this matters more than usual: a hypothesis you did not generate cannot be honestly compared against your model in Stage 3, and that comparison is the entire point of writing the brief first.
+3. **Then write the changes yourself.** For a brief, this matters more than usual: a hypothesis you did not generate cannot be honestly compared against your model in Stage 3, and that comparison is the entire point of writing the brief first.
 4. **Close the loop.** Reply in this thread with what you changed and what you pushed back on, then commit and push.
 
-*One standing rule: do not revise your hypothesis to match what your model later tells you. If the model contradicts the brief, that is a finding, not an error.*
+*One standing rule for this stage: do not revise your hypothesis to match what your model later tells you. If the model contradicts the brief, that is a finding, not an error — Stage 3 asks you to explain the gap, and a brief quietly edited to be right afterwards has nothing left to explain.*
 
 *Your score and the per-criterion breakdown are in your Lamaku comment, not here — this repository is public.*
 
