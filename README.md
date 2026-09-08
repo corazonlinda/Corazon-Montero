@@ -9,6 +9,4 @@ A running list of every piece of work in this repo, linking each engagement's br
 
 | Engagement | Brief | Analysis | Memo |
 |---|---|---|---|
-| _[engagement name]_ | [docs/briefs/...](docs/briefs/) | [analysis/...](analysis/) | [docs/decisions/...](docs/decisions/) |
-
-<!-- Add a new row each time you complete an engagement. -->
+| Perfect Competition | [docs/briefs/perfect-competition-brief.md](docs/briefs/perfect-competition-brief.md) | _(pending)_ | _(pending)_ |
