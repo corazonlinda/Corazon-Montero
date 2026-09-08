@@ -1,6 +1,6 @@
 # Corazón Montero
 
-I am a MBA student and healthcare professional learning all things AI. I graduated with a Bachelors of Science in Biology and Psychology from University of Hawaii at Manoa. My reasoning behind pursuing those degrees is to become a Oncologist in the future and help people with cancer. I am interested in healthcare management, business strategy and oncology. I am passionate about expanding healthcare access to underprivileged communities across Hawai’i.
+I am an MBA student and healthcare professional learning all things AI. I graduated with a Bachelors of Science in Biology and Psychology from University of Hawaii at Manoa. My reasoning behind pursuing those degrees is to become an Oncologist in the future and help people with cancer. I am interested in healthcare management, business strategy and oncology. I am passionate about expanding healthcare access to underprivileged communities across Hawai’i.
 
 
 ## Engagement Index
