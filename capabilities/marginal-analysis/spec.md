@@ -359,3 +359,43 @@ These labeled results (formulas defined in Calculation Logic) make it easy to se
 
 **6. Check results**
 The Checks tab will clearly show whether the workbook passed the validation rules: the TRUE/FALSE results for each Solver constraint, the result of the q = 1 tomato labor hand check, the result of the Farm Profit Lab cross-check, the result of comparing the two Solver runs from different starting points, and the comparison between the final model results and the published check figures.
+
+## Audit Findings
+
+The workbook was built from this spec, opened in Excel, and checked against every validation rule above. The findings below are from that audit.
+
+**1. Two Solver starting points**
+
+I ran Solver twice using two different starting points to check whether the model would produce the same result. For the first run, I started with 0 tomato beds, 0 carrot beds, and 0 mesclun beds. Solver resulted in 10 tomato beds, 20 carrot beds, and 30 mesclun beds, with a profit of $42,775.17. For the second run, I changed the starting point to 20 tomato beds, 0 carrot beds, and 0 mesclun beds and ran Solver again using the same objective and constraints. The second run produced the same crop mix of 10 tomato beds, 20 carrot beds, and 30 mesclun beds, with the same profit of $42,775.17.
+
+This check was meant to determine whether Solver could stop at a different local optimum depending on where it started. Since both starting points produced the same crop mix and profit, I concluded that the Solver result was consistent and did not depend on the starting point. The Checks tab also confirmed this because "Same crop mix in both runs?" and "Profit matches within $0.01?" both returned TRUE.
+
+**2. Farm Profit Lab cross-check**
+
+I cross-checked the marginal cost from my workbook against the Farm Profit Lab to make sure my model was calculating marginal cost correctly. My workbook calculated the marginal cost of the 10th tomato bed as $8,248.11. In the Farm Profit Lab, I set the farm to 9 tomato beds, 0 carrot beds, and 0 mesclun beds. The marginal analysis showed that adding one more tomato bed would increase profit by approximately $551. Since each tomato bed generates $8,800 in revenue, I calculated the Lab's implied marginal cost of the 10th bed as $8,800 − $551 = approximately $8,249.
+
+I then compared the Farm Profit Lab value of approximately $8,249 to my workbook value of $8,248.11. The difference was only $0.89, which was within my $1.00 tolerance, so the check returned TRUE. This check was important because it would have helped me catch an error in my marginal cost calculations. This is because I was comparing my workbook to a separately built model of the same farm. Since the two values were nearly identical, I concluded that my workbook is calculating the marginal cost of the 10th tomato bed correctly.
+
+**3. Standalone crossing-point definition (defect found and fixed)**
+
+I checked the standalone marginal cost crossing points for tomatoes, carrots, and mesclun to see if they matched the published check figures. At first, my workbook calculated the crossing points as 11 tomato beds, 11 carrot beds, and 7 mesclun beds, while the published figures were approximately 10, 10, and 6. Since all three of my results were exactly one bed too high, I looked more closely at how I had defined the crossing point in my model.
+
+For tomatoes, I found that the marginal cost of the 10th bed was $8,248.11, which was still below the $8,800 revenue per bed. However, the marginal cost of the 11th bed was about $9,390, which was above the revenue per bed. This helped me realize that my original formula was identifying the first bed where marginal cost reached or exceeded price, rather than the last bed where marginal cost was still below price. If I had not caught this, my workbook would have continued reporting crossing points that were one bed too high and would not have matched the check numbers provided in the assignment instructions.
+
+I corrected my definition so that the crossing point represents the bed immediately before marginal cost reaches or exceeds the crop's revenue per bed. I also included a safeguard so that if marginal cost never reaches price within the crop's bed cap, the formula returns the bed cap instead of subtracting one. After making this correction and rebuilding the formulas, my standalone crossing points became 10 for tomatoes, 10 for carrots, and 6 for mesclun, which matched the check numbers provided in the assignment instructions.
+
+**4. GRG Nonlinear precision residue**
+
+I checked the validation results on my Checks tab and noticed that two checks related to TOM_BEDS were showing FALSE. One check tested whether my tomato bed result matched the expected value of 10 beds, and the other tested whether the result was a whole number. When I looked more closely at the actual value stored in Excel, I found that Solver had returned 10.0044934774443 tomato beds instead of exactly 10.
+
+To investigate, I changed Solver's Integer Optimality setting to 0% and ran Solver again to see if it would return exactly 10. However, the small decimal amount remained. Because my model uses GRG Nonlinear due to the nonlinear labor formula, Solver can leave a small amount of numerical precision in its result even when the decision variable is constrained to an integer.
+
+I concluded that this small decimal residue does not change the actual solution because 10.0044934774443 rounds to 10 tomato beds, while the carrot and mesclun results were already whole numbers. The FALSE results helped me realize that my checks were looking for an exact value of 10, while Solver had left a very small decimal in the result. The actual crop decision is still 10 tomato beds, 20 carrot beds, and 30 mesclun beds.
+
+**5. CAR_HRS input precision and the profit gap**
+
+I compared the profit calculated by my Excel workbook to the expected profit provided in the assignment. My workbook calculated a profit of $42,775.17, while the expected profit was $42,762.00, leaving a difference of about $13.17. Since I had already confirmed that my total revenue of $210,880 was correct, I knew the difference was coming from the cost side of my model rather than from revenue.
+
+I looked more closely at the labor inputs because labor costs directly affect the final profit. In particular, I checked the carrot labor requirement, CAR_HRS, which is entered as 0.833 hours per week per bed. I went back to the original case information to make sure I had not entered a rounded version of a more precise number. The case itself provides the value as 0.833, so I confirmed that I had entered the given value correctly.
+
+Because this labor value is used in the nonlinear labor formula, even a small difference in the underlying labor assumption can affect the final calculated costs and profit. I decided not to change the 0.833 input just to make my profit match the expected figure, because that would mean changing a value that was provided directly in the case. Instead, I kept the original input and documented the $13.17 difference as an audit finding. This allowed me to keep my model consistent with the information I was actually given rather than changing an input simply to force my answer to match the expected profit.
