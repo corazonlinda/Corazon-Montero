@@ -198,12 +198,15 @@ This allows each crop's standalone P ≈ MC crossing point to be checked indepen
 The standalone marginal-cost schedules use Option B: for each value of q, the crop's labor requirements, farmer hours, temporary-worker hours, labor dollars, and blended labor rate are recalculated independently, assuming the other two crops have zero beds. This lets the marginal-cost schedule show whether the cost of adding another bed reaches the crop's revenue per bed before or after the farm reaches its labor limit, without relying on the blended labor rate from the final Solver solution.
 
 **Standalone Marginal-Cost Crossing Points**
+The crossing point is the last bed that is still worth planting — the last q where marginal cost is still below the crop's revenue per bed — not the first bed that becomes unprofitable.
 ```
-TOM_CROSSING = first q where MC_TOM(q) ≥ TOM_PRICE
-CAR_CROSSING = first q where MC_CAR(q) ≥ CAR_PRICE
-MES_CROSSING = first q where MC_MES(q) ≥ MES_PRICE
+TOM_CROSSING = (first q where MC_TOM(q) ≥ TOM_PRICE) − 1
+CAR_CROSSING = (first q where MC_CAR(q) ≥ CAR_PRICE) − 1
+MES_CROSSING = (first q where MC_MES(q) ≥ MES_PRICE) − 1
 ```
-Must use an exact first-match search, not an approximate or sorted lookup, since marginal cost is not guaranteed to increase at every bed. The calculation searches each marginal-cost schedule for the first TRUE result from `MC_X(q) ≥ X_PRICE`, and returns the corresponding q. If no crossing point is found within a crop's bed cap, the formula returns that crop's bed cap instead of an error, to prevent an expected no-crossing result from creating an `#N/A` error.
+The inner search must use an exact first-match search, not an approximate or sorted lookup, since marginal cost is not guaranteed to increase at every bed. The calculation searches each marginal-cost schedule for the first TRUE result from `MC_X(q) ≥ X_PRICE`, then steps back one bed. If no crossing point is found within a crop's bed cap (marginal cost never reaches price), the formula returns that crop's bed cap directly — it does not subtract 1 in that case, since the crop is worth planting all the way to the cap.
+
+**Audit note (added after building and testing the workbook):** the original definition — "first q where MC(q) ≥ price," with no subtraction — returned 11/11/7 for tomatoes/carrots/mesclun, one bed higher than the published standalone crossings of ~10/~10/~6 on all three crops. Checking the actual numbers confirmed bed 10 is the last tomato bed with MC below price ($8,248 < $8,800) and bed 11 is the first bed where it exceeds price ($9,390 > $8,800) — and bed 10 also matches the published optimal tomato count, which is strong evidence the published figures mean "last profitable bed," not "first unprofitable bed." The definition above reflects that correction.
 
 **10. Total revenue**
 ```
