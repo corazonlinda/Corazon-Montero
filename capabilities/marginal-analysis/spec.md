@@ -20,7 +20,7 @@ status: draft
 | `TOM_DIM` | 0.10 | decimal | Case scenario, crop table |
 | `CAR_PRICE` | 2094 | USD per bed | Case scenario, crop table |
 | `CAR_CAP` | 20 | beds | Case scenario, crop table |
-| `CAR_HRS` | 0.833 | hours per week per bed | Case scenario, crop table |
+| `CAR_HRS` | 2.5/3 | hours per week per bed | Case scenario, crop table |
 | `CAR_FERT` | 440 | USD per bed | Case scenario, crop table |
 | `CAR_DIM` | 0.025 | decimal | Case scenario, crop table |
 | `MES_PRICE` | 2700 | USD per bed | Case scenario, crop table |
@@ -32,10 +32,10 @@ status: draft
 | `FIXED_COST` | 20000 | USD per season | Case scenario, farm table |
 | `TOTAL_BEDS` | 64 | beds | Case scenario, farm table |
 | `OWN_HRS` | 720 | hours | Case scenario, farm table |
-| `OWN_RATE` | 34.72 | USD per hour | Case scenario, farm table |
+| `OWN_RATE` | 50000/1440 | USD per hour | Reverse-engineered from case's stated implied rate ($34.72/hr × 1,440 ≈ $50,000) |
 | `MAX_WORKERS` | 4 | workers | Case scenario, farm table |
 | `WORKER_HRS` | 1440 | hours per worker | Case scenario, farm table |
-| `WORKER_RATE` | 17.36 | USD per hour | Case scenario, farm table |
+| `WORKER_RATE` | 25000/1440 | USD per hour | Reverse-engineered from case's stated rate ($17.36/hr × 1,440 ≈ $25,000) |
 
 ## Structure
 
