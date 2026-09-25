@@ -37,6 +37,11 @@ status: draft
 | `WORKER_HRS` | 1440 | hours per worker | Case scenario, farm table |
 | `WORKER_RATE` | 25000/1440 | USD per hour | Reverse-engineered from case's stated rate ($17.36/hr × 1,440 ≈ $25,000) |
 
+## Conventions
+
+- The farmer's 720 hours of labor are used first. If the farm needs more than 720 hours, the remaining hours are covered by temporary workers at the temporary-worker rate.
+- All three crops use the same blended labor rate based on the farm's overall planting mix. I calculate this by dividing the farm's total labor cost by its total labor hours. I then use that same rate to calculate the labor cost for each crop instead of calculating a separate labor rate for tomatoes, carrots, and mesclun.
+
 ## Structure
 
 * **Tab 1: Inputs**
