@@ -17,3 +17,6 @@ Thumbs.db
 *.pem
 secrets/
 private/
+
+# Throwaway work (research paper)
+scratch/
