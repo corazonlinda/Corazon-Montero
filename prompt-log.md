@@ -50,3 +50,39 @@ Claude checked the numbers in all four sections of my Stage 3 analysis against m
 **Reflection:**
 
 While working through Stage 3 I learned that it is important to understand where the numbers in a model are actually coming from rather than assuming that a number is correct just because the calculation looks correct. The biggest issue I ran into was with the shadow prices for carrots and mesclun. At first, I was using $405.63 and $280, but with Claude's help, I realized those numbers came from the standalone crop schedules and did not represent what would happen if the entire farm was re-optimized. Claude recreated the model in Python and found values of about $353 for carrots and $247 for mesclun. I compared those results with my workbook and reviewed the calculations before using them to revise my analysis. Claude also helped me notice patterns in the marginal-cost curves that I had missed and generated the figures from my workbook data. What I learned most from this process is that using AI still requires me to question the results and understand what they mean. A calculation can be mathematically correct but still answer the wrong question. This stage helped me be more cautious about checking the numbers and the interpretation of them.
+
+## 2026-10-09 — Individual Research Paper: Dakota Access Pipeline
+
+**Tool:** Claude
+
+**Prompt:** I asked Claude to help me research the Dakota Access Pipeline and the potential financial consequences of an oil spill near the Standing Rock Sioux Tribe. I needed help finding reliable sources, understanding the Environmental Impact Statement (EIS), checking my calculations, and organizing my research into a brief that answered Adam's five questions.
+
+**Outcome:**
+
+Claude helped me work through the EIS by finding information about the probability of an oil spill, possible environmental damages, and who would be financially responsible if a spill occurred. It also helped me locate the pages where the information came from so I could check the original sources myself.
+
+Claude suggested using the costs of previous oil spills to estimate how much a major spill at Lake Oahe could potentially cost. It converted the Kalamazoo spill's reported volume of nearly 3 million liters into barrels and estimated a cost of approximately $55,000 per barrel. I used this estimate, along with the Yellowstone spill comparison, to calculate a possible range of damages. I also worked through the expected loss calculations and compared the estimated damages with the previously identified $725.7 million federal liability limit.
+
+While reviewing my research, I found that some of the information needed to be corrected. Claude initially provided a link to an Army Corps webpage that did not work. It also pointed out that the 37,207-year return period included releases of all sizes and directed me to Table 3.1.4-2 in the EIS. I checked the table in the original PDF and confirmed that 5,774,148 years was the design-adjusted return period for a release exceeding 10,000 barrels. I added this information as Row 23 in my research notes and revised my expected loss calculations.
+
+Another important correction involved the Standing Rock Sioux Tribe's water supply. Claude initially described the tribe's drinking water as being exposed to a potential spill. After reviewing the EIS, we found that the modeling did not predict an impact on the tribe's drinking-water intake within the 10-day period. However, the EIS did identify possible impacts on the tribe's agricultural water intakes. I changed my brief to make sure it accurately reflected these findings.
+
+Claude also reviewed my drafts and helped me identify areas that needed improvement. It pointed out that Question 3 was one of my weakest sections because I had not calculated the spill size at which the estimated damages would exceed the liability figure. It also suggested that I include a specific minimum amount of financial assurance in Question 5 instead of making a general recommendation. I used this feedback to rewrite both sections in my own words.
+
+I reviewed all 26 research findings against the original documents and websites and checked the calculations used in my brief. I wrote my responses to Adam's five questions and decided on my recommendation that the Army Corps should require independently verified financial assurance from DAPL. I also included an opposing argument and decided that I would revisit my recommendation by October 2027 if new evidence became available.
+
+After completing my research brief, I asked Claude to commit it to my GitHub repository under docs/briefs/2026-10-09-research-brief.md.
+
+**What I accepted, changed, or rejected:**
+
+**Accepted:** Claude's suggestion to use previous oil spills to estimate potential damages per barrel, including its conversion of the Kalamazoo spill volume from liters to barrels. I also used its help locating information in the EIS, reviewing my drafts, and identifying areas that needed more evidence or calculations.
+
+**Changed:** I corrected the spill probability used in my expected loss calculations after confirming the information in the EIS. I also revised the discussion about Standing Rock's water supply, added a break-even calculation to Question 3, and included a specific financial assurance recommendation in Question 5.
+
+**Rejected:** I did not use the incorrect Army Corps link or keep the original wording suggesting that the tribe's drinking-water intake was expected to be affected.
+
+**Reflection:**
+
+One thing I learned from this assignment is that I cannot automatically assume the information AI gives me is correct, even when it sounds convincing. There were several times when Claude provided information that seemed accurate, but when I checked the original documents, I found mistakes or details that needed to be further explained. The biggest example was the difference between the probability of any oil spill and the probability of a spill exceeding 10,000 barrels. Using the wrong number would have changed my calculations and the argument I was making.
+
+I also learned how important it is to read the original source instead of relying only on an AI summary. The information about Standing Rock's drinking-water intake and agricultural intakes made me realize that small differences in wording can completely change how an issue is presented. I found Claude helpful for finding information and explaining calculations, but I still needed to check the evidence and make my own decisions about what to include. Next time, I want to check the original sources earlier in the research process instead of building my argument around information that I have not confirmed. Moving forward, I want to continue using AI as a research tool while making sure I understand and verify the information before using it in my assignments.
