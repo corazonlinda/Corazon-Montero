@@ -86,3 +86,51 @@ After completing my research brief, I asked Claude to commit it to my GitHub rep
 One thing I learned from this assignment is that I cannot automatically assume the information AI gives me is correct, even when it sounds convincing. There were several times when Claude provided information that seemed accurate, but when I checked the original documents, I found mistakes or details that needed to be further explained. The biggest example was the difference between the probability of any oil spill and the probability of a spill exceeding 10,000 barrels. Using the wrong number would have changed my calculations and the argument I was making.
 
 I also learned how important it is to read the original source instead of relying only on an AI summary. The information about Standing Rock's drinking-water intake and agricultural intakes made me realize that small differences in wording can completely change how an issue is presented. I found Claude helpful for finding information and explaining calculations, but I still needed to check the evidence and make my own decisions about what to include. Next time, I want to check the original sources earlier in the research process instead of building my argument around information that I have not confirmed. Moving forward, I want to continue using AI as a research tool while making sure I understand and verify the information before using it in my assignments.
+
+## October 10, 2026 — Research Spec, README, and Figure 1
+
+**What I asked AI to do:**
+
+I asked AI to review the economic research spec I had written and check whether it followed Adam's assignment guidelines. I also asked for feedback on several versions of my README, including whether the wording and links were correct. Afterward, I asked AI to create Figure 1 using the calculations and sources from my spec and to check whether the graph accurately represented my analysis.
+
+**What AI provided:**
+
+AI suggested improvements to my spec, reviewed the README versions, and identified links that needed to be included. It also generated a graph comparing estimated oil spill damages with the federal liability figure.
+
+During the README process, AI committed a version without my approval. I pointed out the mistake, and AI acknowledged it.
+
+**What I did with the results:**
+
+I reviewed the suggestions, made my own decisions about the wording, and committed my spec. I continued revising the README until I was satisfied with it, then committed and pushed my final version. I also reviewed Figure 1 to make sure it matched my calculations and the assignment requirements. After deciding to keep the figure's title, I authorized AI to commit and push it.
+
+## October 11, 2026 — Paper Review, Revisions, and Final Submission
+
+**What I asked AI to do:**
+
+After writing my research paper, I asked AI to review different versions and identify weaknesses before submission. I wanted feedback on my economic reasoning, calculations, citations, word count, and APA formatting. I also asked AI to check information against the environmental impact statement, review my reference list, and help correct the figure and PDF formatting.
+
+**What AI provided:**
+
+AI identified areas where my explanations needed clarification and pointed out formatting problems, including the paper exceeding four body pages, missing dollar signs in the $162–$397 annual expected-loss estimate, and a figure label appearing on the wrong page.
+
+AI also checked information against the EIS, including pages 1-12, 2-18, 3-81, 3-213, and 3-245, along with Table 3.1.4-2. It reviewed my federal legal citations and helped format the references. The figure was also revised so that the title could appear separately and the source note matched the citation used in my paper.
+
+**What I did with the results:**
+
+I reviewed the feedback and revised my paper to meet the four-page body limit. I corrected the numerical formatting, checked the placement of Figure 1, and reviewed the citations and references. I also checked the PDF before submitting the final paper to the LMS on October 11 at 11:35 PM.
+
+After submission, I asked AI to save the paper, figure, and README tense changes to my GitHub repository. I authorized the final commit and push.
+
+## Note About My Research Process
+
+I began researching the Dakota Access Pipeline before writing my research brief and economic research spec. Both documents were developed after I had already started collecting sources and examining the economic issues.
+
+## Closing Reflection
+
+AI was most helpful when I needed another review of my research, calculations, and formatting. It helped me identify weaknesses that I might have overlooked, especially when I was trying to fit my paper within the four-page limit while keeping the important economic information. It was also useful for organizing my references and creating a graph from the calculations in my research spec.
+
+However, I learned that I could not assume every explanation or recommendation from AI was correct. One mistake involved the 37,207-year return period. AI initially treated this figure as though it represented the probability of a major spill, when it actually referred to spills of any size after adjusting for the pipeline's design. I caught this by comparing the explanation with Table 3.1.4-2 in the Army Corps' environmental impact statement. The table showed that the design-adjusted return period for spills exceeding 10,000 barrels was 5,774,148 years. I corrected the distinction in my analysis because using the wrong probability would change my expected-loss calculation.
+
+Another issue occurred when AI committed a README version without my approval. Although this was not a research error, it showed me that I needed to be clear about when AI could make changes and when I only wanted feedback. After that, I made sure commits and pushes were authorized.
+
+Overall, I found AI useful as a research and editing tool, but I also saw its limitations. It could simplify explanations too much, confuse different numerical estimates, or make changes I had not requested. I learned that I needed to check important claims against the original sources, review suggested edits, and maintain control over what I submitted. The final decisions about my analysis and recommendation were based on my review of the evidence.
