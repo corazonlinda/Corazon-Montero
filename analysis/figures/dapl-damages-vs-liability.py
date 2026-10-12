@@ -21,7 +21,7 @@ yel = x * COST_YEL / 1e6
 x_kal = LIMIT_M * 1e6 / COST_KAL               # ~13,195
 x_yel = LIMIT_M * 1e6 / COST_YEL               # ~5,376
 
-fig, ax = plt.subplots(figsize=(6.5, 4.6), dpi=300)
+fig, ax = plt.subplots(figsize=(6.5, 4.3), dpi=300)
 ax.plot(x, kal, color=BLUE, lw=2, ls="-", label="Kalamazoo-based estimate ($55,000 per barrel)")
 ax.plot(x, yel, color=ORANGE, lw=2, ls="--", label="Yellowstone-based estimate ($135,000 per barrel)")
 ax.axhline(LIMIT_M, color=INK, lw=1.4, ls=":", label="Federal liability figure ($725.7 million)")
@@ -47,8 +47,6 @@ ax.set_xlim(0, 20_000)
 ax.set_ylim(0, 2_800)
 ax.set_xlabel("Number of barrels spilled", fontsize=10)
 ax.set_ylabel("Estimated damages (millions of U.S. dollars)", fontsize=10)
-ax.set_title("Figure 1. Estimated Oil Spill Damages Compared With the Federal Liability Figure",
-             fontsize=10.5, fontweight="bold", loc="left")
 ax.xaxis.set_major_formatter(matplotlib.ticker.FuncFormatter(lambda v, p: f"{v:,.0f}"))
 ax.yaxis.set_major_formatter(matplotlib.ticker.FuncFormatter(lambda v, p: f"${v:,.0f}"))
 ax.tick_params(labelsize=9)
@@ -60,7 +58,7 @@ ax.legend(loc="upper left", fontsize=8.2, frameon=False)
 
 fig.text(0.01, 0.005,
          "Note. Author's calculations; straight lines assume a fixed cost per barrel. Worst-case discharge from the U.S. Army Corps of\n"
-         "Engineers (2025); liability figure from 33 C.F.R. § 138.230(c); cost per barrel from The Narwhal (2013) and Associated Press (2011).\n"
+         "Engineers (2025); liability figure from 33 C.F.R. § 138.230(c); cost per barrel from The Official Price (2013) and Associated Press (2011).\n"
          "The liability figure is not DAPL's confirmed insurance or financial assurance.",
          fontsize=7.4, color=MUTED, ha="left", va="bottom")
 fig.tight_layout(rect=(0, 0.09, 1, 1))
